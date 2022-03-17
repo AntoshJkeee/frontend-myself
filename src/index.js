@@ -1,3 +1,5 @@
+import './styles/index.scss'
+
 const test = {
     name: 'Anton'
 }
