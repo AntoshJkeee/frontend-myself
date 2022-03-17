@@ -1,2 +1,2 @@
-# frontend-myself
-Webpack 
+# Личный сборщик Webpack
+
