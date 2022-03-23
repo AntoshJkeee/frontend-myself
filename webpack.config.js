@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin  = require('copy-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const path = require("path");
 
@@ -43,10 +43,10 @@ module.exports = {
             '@': path.resolve(__dirname, 'src')
         }
     },
-    // подключение карты стилей от src
     devtool: mode === 'development' ? "eval-cheap-module-source-map" : false,
     optimization: optimization(),
     plugins: [
+        new ESLintPlugin(),
         new CopyPlugin ({
             patterns: [
                 {from: path.resolve(__dirname, 'src/public/favicon.ico'), to: path.resolve(__dirname, 'dist')}
