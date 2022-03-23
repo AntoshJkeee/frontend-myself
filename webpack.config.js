@@ -1,10 +1,32 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin  = require('copy-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
+
 const path = require("path");
 
 let mode = 'development'
 if(process.env.NODE_ENV === 'production') {
     mode = 'production'
+}
+
+const optimization = () => {
+    const config = {
+        splitChunks: {
+            chunks: "all"
+        }
+    }
+
+    if(mode === 'production') {
+        config.minimizer = [
+            new CssMinimizerPlugin(),
+            new TerserWebpackPlugin()
+        ]
+    }
+
+    return config
 }
 
 module.exports = {
@@ -22,8 +44,14 @@ module.exports = {
         }
     },
     // подключение карты стилей от src
-    devtool: "source-map",
+    devtool: mode === 'development' ? "eval-cheap-module-source-map" : false,
+    optimization: optimization(),
     plugins: [
+        new CopyPlugin ({
+            patterns: [
+                {from: path.resolve(__dirname, 'src/public/favicon.ico'), to: path.resolve(__dirname, 'dist')}
+            ]
+        }),
         new MiniCssExtractPlugin ({
             //
             filename: "[name].[contenthash].css"
