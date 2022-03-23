@@ -1,5 +1,6 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
 
 let mode = 'development'
 if(process.env.NODE_ENV === 'production') {
@@ -14,6 +15,11 @@ module.exports = {
         // очищение папки dist от копий предыдущих файлов
         clean: true,
         filename: "[name].[contenthash].js"
+    },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'src')
+        }
     },
     // подключение карты стилей от src
     devtool: "source-map",

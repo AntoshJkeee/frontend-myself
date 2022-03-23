@@ -2,7 +2,7 @@
   "name": "frontend-myself",
   "version": "1.0.0",
   "description": "Webpack",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "set NODE_ENV=development&&webpack serve --open",
     "dev": "set NODE_ENV=development&&webpack",
@@ -44,5 +44,8 @@
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
