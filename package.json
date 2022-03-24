@@ -11,6 +11,20 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix --color"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.scss": [
+      "stylelint \"**/*.scss\" --fix"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "node_modules/.bin/eslint --max-warnings=0 "
+    ]
+  },
   "browserslist": [
     "last 2 versions",
     "> 1%",
