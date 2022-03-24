@@ -1,13 +1,5 @@
-import './styles/index.scss'
+import './styles/index.scss';
 
-const test = {
-    name: 'Anton'
-}
+let a = 123;
 
-const user = {
-    a: 1,
-    b: 2,
-    ...test
-}
-
-console.log(user)
+console.log('test' + a);
