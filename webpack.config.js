@@ -46,7 +46,7 @@ module.exports = {
     devtool: mode === 'development' ? "eval-cheap-module-source-map" : false,
     optimization: optimization(),
     plugins: [
-        new ESLintPlugin(),
+        new ESLintPlugin({}),
         new CopyPlugin ({
             patterns: [
                 {from: path.resolve(__dirname, 'src/public/favicon.ico'), to: path.resolve(__dirname, 'dist')}
