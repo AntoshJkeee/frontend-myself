@@ -3,7 +3,7 @@ import './styles/index.scss';
 
 var a = 123;
 
-console.log('asdasd')
+console.log('asdasd')console.log('asdasd')
 
 
 
