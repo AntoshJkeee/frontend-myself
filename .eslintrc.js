@@ -1,4 +1,4 @@
-{
+module.exports = {
   "parser": "@babel/eslint-parser",
   "rules": {
     "no-unused-vars": "warn",
