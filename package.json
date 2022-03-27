@@ -8,8 +8,7 @@
     "dev": "set NODE_ENV=development&&webpack",
     "build": "set NODE_ENV=production&&webpack",
     "prepare": "husky install",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix --color"
+    "pre-commit": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -73,5 +72,10 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "node_modules/.bin/eslint --max-warnings=0 --ignore-pattern"
+    ]
   }
 }
