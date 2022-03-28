@@ -2,26 +2,25 @@ $primaryColor: blue;
 $secondaryColor: green;
 
 html {
-  font-family: "Prompt-Regular";
+	font-family: 'Prompt-Regular';
 }
 
 .logo {
-  background: url("@/images/webpack.png") no-repeat;
-  height: 140px;
-  width: 100%;
+	background: url('@/images/webpack.png') no-repeat;
+	height: 140px;
+	width: 100%;
 }
 
 .container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
 
-  &__title {
-    color: $primaryColor;
-  }
+	&__title {
+		color: $primaryColor;
+	}
 
-  &__text {
-    color: $secondaryColor;
-  }
-
+	&__text {
+		color: $secondaryColor;
+	}
 }
