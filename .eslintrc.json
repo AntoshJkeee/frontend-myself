@@ -11,6 +11,9 @@
     "browser": true,
     "node": true
   },
+  "extends": [
+    "eslint:recommended"
+  ],
   "parserOptions": {
     "requireConfigFile": false
   }
