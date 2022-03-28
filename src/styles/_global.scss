@@ -1,5 +1,5 @@
-$primaryColor: blue;
-$secondaryColor: green;
+$primaryColor: #0000ffff;
+$secondaryColor:  #008000ff;
 
 html {
 	font-family: "Prompt-Regular";
@@ -9,6 +9,7 @@ html {
 	background: url("@/images/webpack.png") no-repeat;
 	height: 140px;
 	width: 100%;
+	position: relative;
 }
 
 .container {
