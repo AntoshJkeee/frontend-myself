@@ -9,7 +9,6 @@ let b = 123
 console.log('test' + a);console.log('test' + a);
 console.log('test' + a);console.log('test' + a);
 console.log('test' + a);console.log('test' + a);
-console.log('test' + a);console.log('test' + a);console.log('test' + a);console.log('test' + a);
-console.log('test' + a);console.log('test' + a);
+console.log('test' + a);console.log('test' + a)
 
 // console.log('test' + a);console.log('test' + a);
