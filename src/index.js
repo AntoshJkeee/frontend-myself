@@ -7,7 +7,5 @@ import './styles/index.scss';
 
 console.log('test' + a);console.log('test' + a);
 console.log('test' + a);console.log('test' + a);
-console.log('test' + a);console.log('test' + a);console.log('test' + a);console.log('test' + a);
-console.log('test' + a);console.log('test' + a);
 console.log('test' + a);console.log('test' + a);
 // console.log('test' + a);console.log('test' + a);
