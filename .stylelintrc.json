@@ -1,9 +1,11 @@
 {
-  "extends": "stylelint-config-recommended",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-order-config-standard",
+    "stylelint-config-prettier"
+  ],
   "plugins": [
-    "stylelint-scss",
-    "stylelint-order",
-    "stylelint-declaration-block-no-ignored-properties"
+    "stylelint-order"
   ],
   "rules": {
     "indentation": "tab",

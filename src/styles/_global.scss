@@ -1,23 +1,26 @@
 $primaryColor: #0000ffff;
-$secondaryColor:  #008000ff;
+$secondaryColor: #008000ff;
 $thirdColor: #9bc02aff;
 $nextColor: #2b202aff;
 
 html {
-	font-family: "Prompt-Regular", sans-serif;
+	font-family: Prompt-Regular, sans-serif;
 }
 
 .logo {
-	background: url("@/images/webpack.png") no-repeat;
-	height: 140px;
-	width: 100%;
 	position: relative;
+
+	width: 100%;
+	height: 140px;
+
+	background: url("@/images/webpack.png") no-repeat;
 }
 
 .container {
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
+
+	margin: 0 auto;
 
 	&__title {
 		color: $primaryColor;
