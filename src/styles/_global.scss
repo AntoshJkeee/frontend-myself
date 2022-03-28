@@ -2,11 +2,11 @@ $primaryColor: blue;
 $secondaryColor: green;
 
 html {
-	font-family: 'Prompt-Regular';
+	font-family: "Prompt-Regular";
 }
 
 .logo {
-	background: url('@/images/webpack.png') no-repeat;
+	background: url("@/images/webpack.png") no-repeat;
 	height: 140px;
 	width: 100%;
 }

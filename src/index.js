@@ -6,6 +6,8 @@ const b = {
 	z: "12222",
 };
 
+let d = { xxx: "test" };
+
 // let a = {
 // 	test: 'sass',
 // 				asd: 123,
@@ -14,7 +16,7 @@ const b = {
 // };
 
 function test() {
-	return { ...c, ...b };
+	return { ...c, ...b, ...d };
 }
 
 test();
