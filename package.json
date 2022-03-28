@@ -16,12 +16,8 @@
     }
   },
   "lint-staged": {
-    "*.scss": [
-      "stylelint \"**/*.scss\" --fix"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "node_modules/.bin/eslint --max-warnings=0 "
+    "*.js": [
+      "node_modules/.bin/eslint --max-warnings=0 --ignore-pattern"
     ]
   },
   "browserslist": [
@@ -49,7 +45,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
-    "eslint": "^6.8.0",
+    "eslint": "^7.32.0",
     "eslint-loader": "^4.0.2",
     "eslint-webpack-plugin": "^3.1.1",
     "html-loader": "^3.1.0",
@@ -72,10 +68,5 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
-  },
-  "lint-staged": {
-    "*.js": [
-      "node_modules/.bin/eslint --max-warnings=0 --ignore-pattern"
-    ]
   }
 }
