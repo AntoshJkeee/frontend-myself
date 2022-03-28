@@ -1,6 +1,6 @@
 import './styles/index.scss';
 
-const c = [123, 233, 555];
+const c = [123, 233, '555'];
 
 // let a = {
 // 	test: 'sass',
