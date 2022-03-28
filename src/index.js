@@ -1,7 +1,7 @@
 import "./styles/index.scss";
 
 const c = [123, 233, "555"];
-const b = {d: 235};
+const b = { d: 235 };
 
 // let a = {
 // 	test: 'sass',
@@ -11,7 +11,7 @@ const b = {d: 235};
 // };
 
 function test() {
-	return {...c, ...b};
+	return { ...c, ...b };
 }
 
 test();
