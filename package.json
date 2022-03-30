@@ -76,6 +76,9 @@
 		"webpack-dev-server": "^4.7.4"
 	},
 	"dependencies": {
-		"normalize.css": "^8.0.1"
+		"normalize.css": "^8.0.1",
+		"postcss-scss": "^4.0.3",
+		"stylelint-config-rational-order": "^0.1.2",
+		"stylelint-prettier": "^2.0.0"
 	}
 }
