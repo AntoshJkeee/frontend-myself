@@ -40,6 +40,7 @@
 		"@babel/eslint-parser": "^7.17.0",
 		"@babel/preset-env": "^7.16.11",
 		"babel-loader": "^8.2.3",
+		"bempug": "^1.1.1",
 		"copy-webpack-plugin": "^10.2.4",
 		"cross-env": "^7.0.3",
 		"css-loader": "^6.7.1",
@@ -58,6 +59,7 @@
 		"prettier": "^2.6.1",
 		"pug": "^3.0.2",
 		"pug-loader": "^2.4.0",
+		"pug-plain-loader": "^1.1.0",
 		"sass": "^1.49.9",
 		"sass-loader": "^12.6.0",
 		"style-loader": "^3.3.1",
@@ -79,6 +81,7 @@
 		"webpack-dev-server": "^4.7.4"
 	},
 	"dependencies": {
-		"normalize.css": "^8.0.1"
+		"normalize.css": "^8.0.1",
+		"pug-html-loader": "^1.1.5"
 	}
 }
