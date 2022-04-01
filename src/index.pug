@@ -1,9 +1,6 @@
-//include ../node_modules/bempug/index
-//-
-//    BEMPUG.modifier = '_';
-//    BEMPUG.afterParse[''] = function (block) {
-//        block.classes = [];
-//    }
+include ../node_modules/bempug/index
+-BEMPUG.modifier = '_';
+
 
 include pug/components/components
 
@@ -12,13 +9,13 @@ html(lang='en')
     head
         meta(charset="UTF-8")
         title Webpack Collector
-        link(rel='icon' href='favicon.ico' type='image/x-icon')
+        link(rel='icon' href='./public/favicon.ico' type='image/x-icon')
     body
         +brand-button()
         +brand-button()
         .logo
         .angular
-            img(src=require(`@/images/angular.png`) alt="angular")
+            img(src='./images/angular.png' alt="angular")
         .container
             h1.container__title Hello Webpack Collector!
             p.container__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, ratione!

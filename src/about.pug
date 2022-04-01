@@ -1,0 +1,22 @@
+include ../node_modules/bempug/index
+-BEMPUG.modifier = '_';
+
+
+include pug/components/components
+
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    title Webpack Collector
+    link(rel='icon' href='./public/favicon.ico' type='image/x-icon')
+  body
+    +brand-button()
+    +brand-button()
+    .logo
+    .angular
+      img(src='./images/angular.png' alt="angular")
+    .container
+      h1.container__title ABOUT !
+      p.container__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, ratione!
+      .test TEST DIV

@@ -55,14 +55,28 @@ module.exports = {
 		}),
 		new HTMLWebpackPlugin({
 			template: "./src/index.pug",
+			filename: `./index.html`,
+		}),
+		new HTMLWebpackPlugin({
+			template: "./src/about.pug",
+			filename: `./about.html`,
 		}),
 	],
 	module: {
 		rules: [
 			{
-				// в папке src все файлы c данным расширением могут получать img и передавать на обработку для loader
-				test: /\.html$/i,
-				loader: "html-loader",
+				test: /\.pug$/,
+				use: [
+					{
+						loader: "html-loader",
+					},
+					{
+						loader: "pug-html-loader",
+						options: {
+							pretty: true,
+						},
+					},
+				],
 			},
 			{
 				// в папке src все файлы с данными расширениями будут переданы на обработку
@@ -98,12 +112,6 @@ module.exports = {
 				// в папке src все файлы с данными расширениями будут переданы на обработку
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
 				type: "asset/resource",
-			},
-			{
-				// все файлы с данными расширениями будут переданы на обработку
-				test: /\.pug$/,
-				loader: "pug-loader",
-				exclude: /(node_modules|bower_components)/,
 			},
 			{
 				// преобразовывает современный js под старые браузеры кроме папки node_modules
